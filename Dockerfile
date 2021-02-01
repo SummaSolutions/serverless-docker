@@ -17,5 +17,8 @@ RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 # clear folders
 RUN rm -rf /var/lib/apt/lists/*
 
+#update pip
+RUN pip3 install --upgrade pip
+
 # install pip dependencies
 RUN pip3 install awscli boto3 botocore requests semver
